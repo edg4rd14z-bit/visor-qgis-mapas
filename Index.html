@@ -1,0 +1,35 @@
+ <<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor QGIS - Google Drive</title>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; overflow: hidden; }
+        #root { width: 100vw; height: 100vh; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // ⚙️ CONFIGURACIÓN GOOGLE DRIVE
+        // Cambia estos IDs por los de TUS archivos
+        const DRIVE_CONFIG = {
+            configFileId: "TU_CONFIG_FILE_ID_AQUI",  // ⚠️ Cambiar
+            layersFolder: "capas/"  // Ruta relativa en tu estructura
+        };
+
+        // Función para convertir ID de Drive a URL directa
+        const getDriveDirectUrl = (fileId) => {
+            return `https://drive.google.com/uc?export=download&id=${fileId}`;
+        };
+
+        // [RESTO DEL CÓDIGO DEL VISOR - igual que antes]
+        // Por brevedad, usa el código completo del visor anterior
+    </script>
+</body>
+</html>
